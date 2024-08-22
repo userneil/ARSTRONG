@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE LIBRARY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar"> 
+            <div class="icon">
+                <h1 class="logo">MY WEBSITE</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" onclick="showSection('home')">HOME</a></li>
+                    <li><a href="#" onclick="showSection('about')">ABOUT</a></li>
+                    <li><a href="#" onclick="showSection('design')">DESIGN</a></li>
+                    <li><a href="#" onclick="showSection('service')">SERVICE</a></li>
+                    <li><a href="#" onclick="showSection('contact')">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="home" class="section">
+          <center> <h1>Welcome to My Library</h1>
+            <p>MY WEBSITE </p></middle>
+            </center>
+            
+        </div>
+          <CENTER>
+            <div id="about" class="section">
+            <h1>ABOUT US</h1>
+                <p>THIS WEBSITE IS FOR PROJECT ONLY</p>
+                <P> HOW THERE YOU TO OPEN THIS </P>
+                <P> DID YOU KNOW THAT THIS IS ILLEGAL</P>
+            </div></CENTER>
+
+        <div id="design" class="section">
+        
+       
+            <P></P>
+        <div id="service" class="section">
+            <h2>Our Services</h2>
+            <p>In addition to our extensive collection of books, we offer various services such as book reservations, interlibrary loans, and digital resources access. Our library also hosts events, workshops, and reading programs for all age groups. Visit us to explore our full range of services and get involved in our community activities.</p>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, please reach out to us. You can contact us via email at info@thelibrary.com or by phone at (123) 456-7890. You can also visit us at our physical location:</p>
+            <address>
+                The Library<br>
+                123 Book Street<br>
+                Booktown, BK 45678
+            </address>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(id);
+            selectedSection.classList.add('active');
+        }
+
+        // Show the home section by default
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+</body>
+</html>
